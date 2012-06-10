@@ -1,0 +1,53 @@
+#{extends 'main.html' /}
+#{set title:'Users' /}
+#{set pageName:'users' /}
+
+<table class="table table-striped table-bordered table-condensed">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            #{list items:users, as:'u'}
+                <tr>
+                    <td>${u.id}</td>
+                    <td>${u.email}</td>
+                    <td>
+                    	<a href="@{Users.remove(u.id)}">remove</a> | 
+                    	<a href="#" onclick="javascript:edit_user(${u.id})">edit</a> |
+                    	<a href="@{Users.detail(u.id)}">detail</a>
+                    </td>
+              	</tr>
+            #{/list}
+        </tbody>
+    </table>
+
+    <a class="btn btn-create" href="#">+ Add User</a>
+
+<div id="myModal" class="modal hide fade">
+    <div class="modal-body">
+    #{form @Users.save(), class:'form-horizontal'}
+        <input type="hidden" name="user.id" id="user_id" value="" />
+
+        <fieldset>
+            <legend id="modal_legend">Create a new user</legend>
+
+            <div class="control-group">
+                <label class="control-label" for="input-email">email</label>
+                <div class="controls">
+                    <input type="text" name="user.email" class="input-xlarge" id="input-email">
+                </div>
+            </div>
+        </fieldset>
+    #{/form}
+    </div>
+    <!-- dialog buttons -->
+    <div class="modal-footer">
+        <a href="#" id="ok_button" class="btn btn-success">Create</a>
+        <a href="#" class="btn btn-cancel">Cancel</a>
+    </div>
+</div>
+    

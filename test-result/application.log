@@ -1,0 +1,100 @@
+08 Jun 2012 14:10:21,655 INFO  ~ Starting /Users/timhof/Documents/scavenger
+08 Jun 2012 14:10:21,659 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+08 Jun 2012 14:10:22,246 WARN  ~ You're running Play! in DEV mode
+08 Jun 2012 14:10:22,350 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+08 Jun 2012 15:08:17,731 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+08 Jun 2012 15:08:18,629 INFO  ~ Application 'scavenger' is now started !
+08 Jun 2012 15:08:19,688 ERROR ~ 
+
+@6aj2j99ep
+Internal Server Error (500) for request GET /hunts/remove/1
+
+Execution exception (In /app/controllers/Hunts.java around line 37)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.Hunts.remove(Hunts.java:37)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+08 Jun 2012 15:08:48,927 ERROR ~ 
+
+@6aj2j99f0
+Internal Server Error (500) for request GET /hunt/detail/1
+
+Template execution error (In /app/views/Hunts/detail.html around line 50)
+Execution error occured in template /app/views/Hunts/detail.html. Exception raised was NullPointerException : Cannot get property 'id' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'id' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.detail(Hunts.java:55)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'id' on null object
+	at /app/views/Hunts/detail.html.(line:50)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 13 more
+08 Jun 2012 15:17:47,255 ERROR ~ 
+
+@6aj2j99f1
+Internal Server Error (500) for request GET /hunt/detail_pdf/1
+
+Execution exception (In /app/controllers/Hunts.java around line 132)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at controllers.Hunts.detailPDF(Hunts.java:132)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+08 Jun 2012 15:17:55,344 ERROR ~ 
+
+@6aj2j99f2
+Internal Server Error (500) for request GET /hunt/detail/1
+
+Template execution error (In /app/views/Hunts/detail.html around line 17)
+Execution error occured in template /app/views/Hunts/detail.html. Exception raised was NullPointerException : Cannot get property 'invitations' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'invitations' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.detail(Hunts.java:56)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'invitations' on null object
+	at /app/views/Hunts/detail.html.(line:17)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 13 more

@@ -1,0 +1,53 @@
+#{extends 'main.html' /}
+#{set title:'Targets' /}
+#{set pageName:'targets' /}
+
+<table class="table table-striped table-bordered table-condensed">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Lat</th>
+                <th>Lon</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            #{list items:targets, as:'t'}
+                <tr>
+                    <td>${t.id}</td>
+                    <td>${t.description}</td>
+                    <td>${t.latitude}</td>
+                    <td>${t.longitude}</td>
+                    <td><a href="@{Targets.remove(t.id)}">remove</a> | <a href="#" onclick="javascript:edit_target(${t.id})">edit</a></td>
+              	</tr>
+            #{/list}
+        </tbody>
+    </table>
+
+    <a class="btn btn-create" href="#">+ Add Target</a>
+
+<div id="myModal" class="modal hide fade">
+    <div class="modal-body">
+    #{form @Targets.save(), class:'form-horizontal'}
+        <input type="hidden" name="target.id" id="target_id" value="" />
+
+        <fieldset>
+            <legend id="modal_legend">Create a new target</legend>
+
+            <div class="control-group">
+                <label class="control-label" for="input-description">Name</label>
+                <div class="controls">
+                    <input type="text" name="target.description" class="input-xlarge" id="input-description">
+                </div>
+            </div>
+        </fieldset>
+    #{/form}
+    </div>
+    <!-- dialog buttons -->
+    <div class="modal-footer">
+        <a href="#" id="ok_button" class="btn btn-success">Create</a>
+        <a href="#" class="btn btn-cancel">Cancel</a>
+    </div>
+</div>
+    

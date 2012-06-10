@@ -1,0 +1,16 @@
+
+
+
+#{list items:hunt.targets, as:'t'}
+
+	<div style="height:20%;">
+		<h1>${t.description}</h1>
+	</div>
+    <div id="qr_image" style="height:90%;">
+    	<img style="height:100%;width:100%;" src="/public/images/qr_codes/qr_${t.id}.png" />
+    </div>
+#{/list}
+
+
+
+    

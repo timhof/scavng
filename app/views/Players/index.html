@@ -1,0 +1,49 @@
+#{extends 'main.html' /}
+#{set title:'Players' /}
+#{set pageName:'players' /}
+
+<table class="table table-striped table-bordered table-condensed">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            #{list items:players, as:'p'}
+                <tr>
+                    <td>${p.id}</td>
+                    <td>${p.email}</td>
+                    <td><a href="@{Players.remove(p.id)}">remove</a> | <a href="#" onclick="javascript:edit_player(${p.id})">edit</a></td>
+              	</tr>
+            #{/list}
+        </tbody>
+    </table>
+
+    <a class="btn btn-create" href="#">+ Add Player</a>
+
+<div id="myModal" class="modal hide fade">
+    <div class="modal-body">
+    #{form @Players.save(), class:'form-horizontal'}
+        <input type="hidden" name="player.id" id="player_id" value="" />
+
+        <fieldset>
+            <legend id="modal_legend">Create a new player</legend>
+
+            <div class="control-group">
+                <label class="control-label" for="input-email">email</label>
+                <div class="controls">
+                    <input type="text" name="player.email" class="input-xlarge" id="input-email">
+                </div>
+            </div>
+        </fieldset>
+    #{/form}
+    </div>
+    <!-- dialog buttons -->
+    <div class="modal-footer">
+        <a href="#" id="ok_button" class="btn btn-success">Create</a>
+        <a href="#" class="btn btn-cancel">Cancel</a>
+    </div>
+</div>
+    

@@ -1,0 +1,34 @@
+#{extends 'main.html' /}
+#{set title:'appflo | Login' /}
+#{set pageName:'login' /}
+#{set hideMenu:'true' /}
+
+<div id="myModal" class="modal">
+    <div class="modal-body">
+    #{form @Login.login(), method:'post', class:'form-horizontal'}
+        <fieldset>
+            <legend>Welcome, please login to proceed</legend>
+
+            <div class="control-group">
+                <label class="control-label" for="input-email">Email</label>
+                <div class="controls">
+                    <input type="text" name="email" class="input-xlarge" id="input-email">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input-passphrase">Password</label>
+                <div class="controls">
+                    <input type="password" name="passphrase" class="input-xlarge" id="input-passphrase">
+                </div>
+            </div>
+        </fieldset>
+    #{/form}
+    </div>
+    <!-- dialog buttons -->
+    <div class="modal-footer">
+        <a href="#" id="login_button" class="btn btn-primary">Continue</a>
+    </div>
+    <div class="modal-footer">
+        <a href="@{Login.register()}">Register</a>
+    </div>
+</div>

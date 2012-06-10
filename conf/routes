@@ -1,0 +1,36 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       		Application.index
+
+GET     /register                        				Login.register
+
+GET     /targets                        				Targets.index
+GET     /target/detail_json/{id}             			Targets.detailJSON
+
+GET     /users                        					Users.index
+GET     /user/detail_json/{id}             				Users.detailJSON
+GET     /users/remove/{id}                    			Users.remove
+GET     /users/detail/{id}                    			Users.detail
+GET     /users/accept/{invitationId}            		Users.acceptInvitation
+GET     /users/decline/{invitationId}           		Users.declineInvitation
+
+GET     /hunts                                			Hunts.index
+GET     /hunts/remove/{id}                    			Hunts.remove
+GET     /hunt/detail/{id}                    			Hunts.detail
+GET     /hunt/detail_json/{id}               			Hunts.detailJSON
+GET     /hunt/detail_pdf/{id}               			Hunts.detailPDF
+
+GET  	/hunt/{huntId}/targets/remove/{targetId}    	Hunts.removeTarget
+
+# Ignore favicon requests
+GET 	/favicon.ico                            		404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                		staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
+

@@ -1,0 +1,13 @@
+<h1>${hunt.description}</h2>
+<h3>Participants</h3>
+<ul>
+	#{list items:hunt.players, as:'p'}
+	<li>${p.email}</li>
+	#{/list}
+</ul>
+<h3>Targets</h3>
+<ul>
+	#{list items:hunt.targets, as:'t'}
+	<li>${t.description}</li>
+	#{/list}
+</ul>

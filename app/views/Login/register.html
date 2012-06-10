@@ -1,0 +1,48 @@
+#{extends 'main.html' /}
+#{set title:'Login' /}
+#{set pageName:'register' /}
+
+<style type="text/css">
+* { font-family: Verdana; font-size: 96%; }
+label { width: 10em; float: left; }
+label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
+p { clear: both; }
+.submit { margin-left: 12em; }
+em { font-weight: bold; padding-right: 1em; vertical-align: top; }
+</style>
+
+<div id="myModal" class="modal">
+    <div class="modal-body">
+    #{form @Login.createUser(), id:'registerForm', method:'post', class:'form-horizontal'}
+        <fieldset>
+            <legend>Enter registration information</legend>
+
+            <div class="control-group">
+                <label class="control-label" for="input-email">Username</label>
+                <div class="controls">
+                    <input type="text" name="user.email" class="required input-xlarge" id="input-email">
+                	<em>*</em>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input-password">Password</label>
+                <div class="controls">
+                    <input type="password" name="user.passphrase" class="required input-xlarge" id="input-passphrase">
+                	<em>*</em>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="input-password">Password confirm</label>
+                <div class="controls">
+                    <input type="password" name="user.passphrase-again" class="required input-xlarge" id="input-passphrase-again">
+                	<em>*</em>
+                </div>
+            </div>
+        </fieldset>
+    #{/form}
+    </div>
+    <!-- dialog buttons -->
+    <div class="modal-footer">
+        <a href="#" id="register_button" class="btn btn-primary">Register</a>
+    </div>
+</div>

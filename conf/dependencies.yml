@@ -1,0 +1,15 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> pdf 0.9
+    - play -> deadbolt 1.5.4
+    - provided -> core 2.1-SNAPSHOT
+    - provided -> javase 2.1-SNAPSHOT
+    
+repositories: 
+    - provided: 
+        type:       local 
+        artifact:   "${application.path}/jar/[module]-[revision].jar" 
+        contains: 
+            - provided -> * 
