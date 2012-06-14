@@ -5,65 +5,35 @@ import static play.modules.pdf.PDF.renderPDF;
 import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
-import java.util.List;
 
 import models.Hunt;
-import models.Invitation;
-import models.Invitation.InvitationStatus;
-import models.Organizer;
 import models.Target;
 import models.User;
 import play.Play;
 import play.modules.pdf.PDF;
 import play.modules.pdf.PDF.Options;
-import play.mvc.Controller;
-import play.mvc.With;
 import util.MapKeys;
 import Helper.QRHelper;
 
 import com.google.zxing.WriterException;
 
-import controllers.deadbolt.Deadbolt;
-
-@With(Deadbolt.class)
-public class Hunts extends Controller {
+public class Hunts extends UserBaseController {
 
 	public static void index() {
+
+		Collection<Hunt> hunts = Hunt.findAll();
+		System.out.println("hunts.size: " + hunts.size());
+		render(hunts);
+
+	}
+
+	public static void ownedHunts() {
 		User user = MapKeys.User.get(session, new User());
 
 		Collection<Hunt> hunts = Hunt.find("organizer.user = ?", user).fetch();
 		System.out.println("hunts.size: " + hunts.size());
 		render(hunts);
 
-	}
-
-	public static void save(Hunt hunt) {
-
-		Organizer organizer = getOrganizer();
-		hunt.setOrganizer(organizer);
-		hunt.save();
-		System.out.println("SAVED");
-		index();
-	}
-
-	private static Organizer getOrganizer() {
-		Organizer organizer = null;
-		User user = MapKeys.User.get(session, new User());
-		List<Organizer> organizers = Organizer.find("user = ?", user).fetch();
-		if (organizers.isEmpty()) {
-			organizer = new Organizer();
-			organizer.setUser(user);
-			organizer.save();
-		} else {
-			organizer = organizers.iterator().next();
-		}
-		return organizer;
-	}
-
-	public static void remove(Long id) {
-		Hunt hunt = Hunt.findById(id);
-		hunt.delete();
-		index();
 	}
 
 	public static void detailJSON(Long id) {
@@ -81,65 +51,6 @@ public class Hunts extends Controller {
 	public static void detail(Long id) {
 		Hunt hunt = Hunt.findById(id);
 		render(hunt);
-	}
-
-	public static void saveTarget(Hunt hunt, Target target) {
-
-		target.setHunt(hunt);
-		target.save();
-		if (!hunt.getTargets().contains(target)) {
-			hunt.getTargets().add(target);
-		}
-		hunt.save();
-		detail(hunt.getId());
-	}
-
-	public static void removeTarget(Long huntId, Long targetId) {
-
-		Hunt hunt = Hunt.findById(huntId);
-		Target target = Target.findById(targetId);
-
-		hunt.getTargets().remove(target);
-		target.delete();
-
-		detail(hunt.getId());
-	}
-
-	public static void inviteUser(Hunt hunt, User user) {
-
-		List<Object> users = User.find("email", user.getEmail()).fetch();
-		if (users.isEmpty()) {
-			user.save();
-		} else {
-			user = (User) users.iterator().next();
-		}
-
-		Invitation invitation = new Invitation();
-		invitation.setUser(user);
-		invitation.setHunt(hunt);
-		invitation.save();
-
-		hunt.getInvitations().add(invitation);
-
-		user.getInvitations().add(invitation);
-
-		detail(hunt.getId());
-	}
-
-	public static void uninvite(Long huntId, Long userId) {
-
-		Hunt hunt = Hunt.findById(huntId);
-		User user = User.findById(userId);
-
-		List<Invitation> invitations = Invitation.find("user = ? and hunt = ?",
-				user, hunt).fetch();
-		if (!invitations.isEmpty()) {
-			Invitation invitation = invitations.iterator().next();
-			invitation.setStatus(InvitationStatus.REVOKED);
-			invitation.save();
-		}
-
-		detail(hunt.getId());
 	}
 
 	public static void detailPDF(Long id) {

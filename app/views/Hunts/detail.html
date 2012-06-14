@@ -2,108 +2,48 @@
 #{set title:'Hunt' /}
 #{set pageName:'huntDetail' /}
 
+%{def isOrganizer = user != null && user.id == hunt.organizer.user.id }%
+
 <div>
-	<h2>Organizer</h2>
-	<table class="table table-striped table-bordered table-condensed">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-                <tr>
-                    <td>${hunt.organizer.id}</td>
-                    <td>${hunt.organizer.user.email}</td>
-              	</tr>
-        </tbody>
-    </table>
+	<h2>Organizer: ${hunt.organizer.user.email}</h2>
 </div>
-	<div>
-	<h2>Invitations</h2>
-		<table class="table table-striped table-bordered table-condensed">
-	        <thead>
-	            <tr>
-	                <th>Id</th>
-	                <th>Email</th>
-	                <th>Player Status</th>
-	                <th>Invitation Status</th>
-	                <th>Action</th>
-	            </tr>
-	        </thead>
-	        <tbody>
-	            #{list items:hunt.invitations, as:'i'}
-	                <tr>
-	                    <td>${i.user.id}</td>
-	                    <td>${i.user.email}</td>
-	                    <td>${i.user.status}</td>
-	                    <td>${i.status}</td>
-	                    <td><a href="@{Hunts.uninvite(hunt.id, i.user.id)}">remove</a></td>
-	              	</tr>
-	            #{/list}
-	        </tbody>
-	    </table>
+<div>
+	<h2>Type: ${hunt.huntType.label}</h2>
+</div>
+<div>
+	<h2>Status: ${hunt.huntStatus.label}</h2>
+</div>
 	
-	    <p><a id="add_user_btn" class="btn btn-create" href="#">Invite Player</a></p>
-	</div>
 <div>
 	<h2>Players</h2>
-	<table class="table table-striped table-bordered table-condensed">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>email</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            #{list items:hunt.players, as:'p'}
-                <tr>
-                    <td>${p.id}</td>
-                    <td>${p.user.email}</td>
-                    <td>&nbsp;</td>
-              	</tr>
-            #{/list}
-        </tbody>
-    </table>
+	#{playersTable players:hunt.players /}
+    #{if isOrganizer}
+    <p><a id="add_user_btn" class="btn btn-create" href="#">Invite Player</a></p>
+    #{/if}
 </div>
 <div>
 	<h2>Targets</h2>
-	<table class="table table-striped table-bordered table-condensed">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Description</th>
-                <th>Lat</th>
-                <th>Lon</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            #{list items:hunt.targets, as:'t'}
-                <tr>
-                    <td>${t.id}</td>
-                    <td>${t.description}</td>
-                    <td>${t.latitude}</td>
-                    <td>${t.longitude}</td>
-                    <td><a href="@{Hunts.removeTarget(hunt.id, t.id)}">remove</a> | <a href="#" onclick="javascript:edit_target(${t.id})">edit</a></td>
-              	</tr>
-            #{/list}
-        </tbody>
-    </table>
-
+	#{targetsTable targets:hunt.targets /}
+	#{if isOrganizer}
     <p><a id="add_target_btn" class="btn btn-create" href="#">+ Add Target</a></p>
+    #{/if}
 </div>
 
 <div>
     <p><a href="@{Hunts.detailPDF(hunt.id)}">PDF</a></p>
 </div>
 
+#{if isOrganizer}
+<div>
+	<h2>Invitations</h2>
+	#{invitationsTable invitations:hunt.invitations /}
+</div>
+#{/if}
 
 <!-- Target add/edit modal -->
 <div id="target_modal" class="modal hide fade edit_add_modal">
     <div class="modal-body">
-    #{form @Hunts.saveTarget(), id:'target_form', class:'form-horizontal'}
+    #{form @HuntsSecured.saveTarget(), id:'target_form', class:'form-horizontal'}
     	<input type="hidden" name="hunt.id" id="hunt_id" value="${hunt.id}" />
         <input type="hidden" name="target.id" id="target_id" value="" />
 
@@ -130,9 +70,8 @@
 <!-- Person add/edit modal -->
 <div id="user_modal" class="modal hide fade edit_add_modal">
     <div class="modal-body">
-    #{form @Hunts.inviteUser(), id:'user_form', class:'form-horizontal'}
+    #{form @HuntsSecured.inviteUser(), id:'user_form', class:'form-horizontal'}
     	<input type="hidden" name="hunt.id" id="hunt_id" value="${hunt.id}" />
-        <input type="hidden" name="user.id" id="user_id" value="" />
 
         <fieldset>
             <legend id="user_modal_legend">Create a new target</legend>

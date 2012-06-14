@@ -138,6 +138,22 @@ public class User extends Model implements RoleHolder, MementoBridge<User> {
 		}
 	}
 
+	public Player joinHunt(Hunt hunt) {
+
+		Player player = null;
+
+		Collection<Player> players = Player.find("user = ? and hunt = ?", this,
+				hunt).fetch();
+		if (players.isEmpty()) {
+			player = new Player();
+			player.setHunt(hunt);
+			player.setUser(this);
+			player.save();
+
+		}
+		return player;
+	}
+
 	// public boolean validatePassphrase(String passphraseCandidate) {
 	// if (this.passwordSalt == null || this.passwordHash == null
 	// || this.passwordSalt.length() == 0
@@ -191,4 +207,21 @@ public class User extends Model implements RoleHolder, MementoBridge<User> {
 		return User.findById(i);
 	}
 
+	public Collection<Hunt> getHunts() {
+		Collection<Hunt> hunts = new HashSet<Hunt>();
+		for (Player player : this.players) {
+			hunts.add(player.getHunt());
+		}
+		return hunts;
+	}
+
+	public void copyTo(User to) {
+
+		to.deviceId = deviceId;
+		to.email = email;
+		to.name = name;
+		to.passwordHash = passwordHash;
+		to.passwordSalt = passwordSalt;
+
+	}
 }

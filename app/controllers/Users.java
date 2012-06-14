@@ -8,9 +8,8 @@ import models.Invitation.InvitationStatus;
 import models.Player;
 import models.Target;
 import models.User;
-import play.mvc.Controller;
 
-public class Users extends Controller {
+public class Users extends UserBaseController {
 
 	public static void index() {
 		Collection<User> users = User.all().fetch();
@@ -70,13 +69,9 @@ public class Users extends Controller {
 
 		Invitation invitation = Invitation.findById(invitationId);
 		User user = invitation.getUser();
-		Collection<Player> players = Player.find("user = ? and hunt = ?", user,
-				invitation.getHunt()).fetch();
-		if (players.isEmpty()) {
-			Player player = new Player();
-			player.setHunt(invitation.getHunt());
-			player.setUser(user);
-			player.save();
+
+		Player player = user.joinHunt(invitation.getHunt());
+		if (player != null) {
 
 			invitation.getHunt().getPlayers().add(player);
 			invitation.getHunt().save();

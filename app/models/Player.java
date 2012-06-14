@@ -58,4 +58,13 @@ public class Player extends Model {
 		this.hunt = hunt;
 	}
 
+	public int getScore() {
+
+		int score = 0;
+
+		for (Target target : targets) {
+			score += target.getBounty();
+		}
+		return score;
+	}
 }

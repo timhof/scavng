@@ -42,15 +42,35 @@
                         <span class="icon-bar"></span>
                     </a>
 
-                    <a class="brand" href="/home">xHunt</a>
+                    <a class="brand" href="/">xHunt</a>
 
                     <div class="nav-collapse">
                             <ul class="nav">
                                 <li><a href="/">Home</a></li>
                                 <li><a href="@{Targets.index()}">Targets</a></li>
                                 <li><a href="@{Hunts.index()}">Hunts</a></li>
-                                <li><a href="@{Users.index()}">Users</a></li>
+                                #{if user != null}
+                                <li><a href="@{Users.detail(user.id)}">Profile</a></li>
+                                #{/if}
                              </ul>
+                             </ul>
+                            <ul class="nav pull-right">
+                                <li class="divider-vertical"></li>
+                                #{if user != null}
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User ${user.email}</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="@{Users.detail(user.id)}">Profile</a></li>
+                                            <li><a href="/logout">Logout</a></li>
+                                        </ul>
+                                    </li>
+                                #{/if}
+                                #{else}
+                                	 <li>
+                                        <a href="@{Login.index()}">Signin</a>
+                                    </li>
+                                #{/else}
+                            </ul>
                    </div>
                    </div>
                    </div>

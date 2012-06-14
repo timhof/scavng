@@ -62,4 +62,14 @@ var showForm = function(legend, buttonText, id, description){
        	"keyboard"  : true,
        	"show"      : true    // this parameter ensures the modal is shown immediately
     });
+    
+    $('#myModal').on('shown', function () {
+	  	$("#input-description").focus();
+	});
+	
+	$("#input-message").keyup(function(event){
+	    if(event.keyCode == 13){
+	        $("#ok_button").click();
+	    }
+	});
 }

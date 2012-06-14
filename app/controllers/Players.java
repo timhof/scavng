@@ -5,9 +5,8 @@ import java.util.List;
 
 import models.Player;
 import models.Target;
-import play.mvc.Controller;
 
-public class Players extends Controller {
+public class Players extends UserBaseController {
 
 	public static void index() {
 		Collection<Player> players = Player.all().fetch();

@@ -3,9 +3,8 @@ package controllers;
 import java.util.Collection;
 
 import models.Target;
-import play.mvc.Controller;
 
-public class Targets extends Controller {
+public class Targets extends UserBaseController {
 
 	public static void index() {
 		Collection<Target> targets = Target.all().fetch();

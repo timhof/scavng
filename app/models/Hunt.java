@@ -16,13 +16,36 @@ import play.db.jpa.Model;
 public class Hunt extends Model {
 
 	public enum HuntType {
-		OPEN, INVITE_ONLY
+		OPEN("Open"), INVITE_ONLY("Invite-only");
+		private final String label;
+
+		private HuntType(String label) {
+			this.label = label;
+		}
+
+		public String label() {
+			return this.label;
+		}
+	}
+
+	public enum HuntStatus {
+		CREATED("Created"), IN_PROGRESS("In-progress"), COMPLETED("Completed");
+		private final String label;
+
+		private HuntStatus(String label) {
+			this.label = label;
+		}
+
+		public String label() {
+			return this.label;
+		}
 	}
 
 	@OneToMany(cascade = { CascadeType.ALL }, mappedBy = "hunt")
 	private Collection<Invitation> invitations;
 
-	private final HuntType huntType = HuntType.OPEN;
+	private HuntType huntType = HuntType.OPEN;
+	private HuntStatus huntStatus = HuntStatus.CREATED;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "organizer_id")
@@ -35,6 +58,10 @@ public class Hunt extends Model {
 	private Collection<Target> targets;
 
 	private String description;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "location_id")
+	private Location location;
 
 	public String getDescription() {
 		return description;
@@ -78,6 +105,18 @@ public class Hunt extends Model {
 
 	public HuntType getHuntType() {
 		return huntType;
+	}
+
+	public HuntStatus getHuntStatus() {
+		return huntStatus;
+	}
+
+	public void setHuntStatus(HuntStatus huntStatus) {
+		this.huntStatus = huntStatus;
+	}
+
+	public void setHuntType(HuntType huntType) {
+		this.huntType = huntType;
 	}
 
 }

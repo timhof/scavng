@@ -3,26 +3,10 @@
 #{set pageName:'userDetail' /}
 
 <div>
-	<table class="table table-striped table-bordered table-condensed">
-        <thead>
-            <tr>
-                <th>Hunt</th>
-                <th>Invitation Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            #{list items:user.invitations, as:'i'}
-            	#{if i.status == models.Invitation.InvitationStatus.SENT}
-                <tr>
-                    <td><a href="@{Hunts.detail(i.hunt.id)}">${i.hunt.description}</a></td>
-                    <td>${i.status}</td>
-                    <td><a href="@{Users.acceptInvitation(i.id)}">accept</a> | <a href="@{Users.declineInvitation(i.id)}">decline</a></td>
-              	</tr>
-              	
-				#{/if}
-            #{/list}
-        </tbody>
-    </table>
+	#{invitationsTable invitations:user.invitations, user:user /}
+</div>
+
+<div>
+	#{huntsTable hunts:user.hunts /}
 </div>
     

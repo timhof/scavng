@@ -14,6 +14,20 @@ import play.db.jpa.Model;
 public class Target extends Model {
 
 	private String description;
+	private String message;
+
+	private int bounty;
+
+	private float latitude;
+	private float longitude;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "hunt_id")
+	private Hunt hunt;
+
+	// Players that found this target
+	@ManyToMany(fetch = FetchType.LAZY)
+	private Collection<Player> players;
 
 	public String getDescription() {
 		return description;
@@ -55,14 +69,20 @@ public class Target extends Model {
 		this.players = players;
 	}
 
-	private float latitude;
-	private float longitude;
+	public String getMessage() {
+		return message;
+	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "hunt_id")
-	private Hunt hunt;
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
-	// Players that found this target
-	@ManyToMany(fetch = FetchType.LAZY)
-	private Collection<Player> players;
+	public int getBounty() {
+		return bounty;
+	}
+
+	public void setBounty(int bounty) {
+		this.bounty = bounty;
+	}
+
 }

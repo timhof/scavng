@@ -2,30 +2,15 @@
 #{set title:'Hunts' /}
 #{set pageName:'hunts' /}
 
-<table class="table table-striped table-bordered table-condensed">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Description</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            #{list hunts, as:'h'}
-                <tr>
-                    <td>${h.id}</td>
-                    <td>${h.description}</td>
-                    <td><a href="@{Hunts.detail(h.id)}">detail</a> | <a href="@{Hunts.remove(h.id)}">remove</a> | <a href="#" onclick="javascript:edit_hunt(${h.id})">edit</a></td>
-              	</tr>
-            #{/list}
-        </tbody>
-    </table>
+#{huntsTable hunts:hunts /}
 
+#{if user != null}
     <a class="btn btn-create" href="#">+ Add Hunt</a>
+#{/if}
 
 <div id="myModal" class="modal hide fade">
     <div class="modal-body">
-    #{form @Hunts.save(), class:'form-horizontal'}
+    #{form @HuntsSecured.save(), class:'form-horizontal'}
 
         <input type="hidden" name="hunt.id" id="hunt_id" value="" />
 
@@ -37,7 +22,19 @@
                 <div class="controls">
                     <input type="text" name="hunt.description" class="input-xlarge" id="input-description">
                 </div>
+         	</div>
+         	
+         	<div class="control-group">
+                <label class="control-label" for="input-description">Type</label>
+                <div class="controls">
+                    <select name="hunt.huntType" id="input-huntType">
+                        #{list items:models.Hunt.HuntType.values(), as:'huntType'}
+                        <option value="${huntType}">${huntType}</option>
+                    #{/list}
+                </select>
+                </div>
             </div>
+            
         </fieldset>
     #{/form}
     </div>

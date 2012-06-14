@@ -3,7 +3,7 @@
 require:
     - play
     - play -> pdf 0.9
-    - play -> deadbolt 1.5.4
+    - play -> deadbolt 1.5.5
     - provided -> core 2.1-SNAPSHOT
     - provided -> javase 2.1-SNAPSHOT
     

@@ -85,6 +85,16 @@ var showTargetForm = function(legend, buttonText, id, description){
        	"keyboard"  : true,
        	"show"      : true    // this parameter ensures the modal is shown immediately
     });
+    
+    $('#target_modal').on('shown', function () {
+	  	$("#input-description").focus();
+	});
+
+    $("#input-description").keyup(function(event){
+	    if(event.keyCode == 13){
+	        $("#target_ok_button").click();
+	    }
+	});
 }
 
 var showPlayerForm = function(legend, buttonText, id, email){
@@ -103,4 +113,14 @@ var showPlayerForm = function(legend, buttonText, id, email){
        	"keyboard"  : true,
        	"show"      : true    // this parameter ensures the modal is shown immediately
     });
+    
+    $('#user_modal').on('shown', function () {
+	  	$("#input-email").focus();
+	});
+
+    $("#input-description").keyup(function(event){
+	    if(event.keyCode == 13){
+	        $("#user_ok_button").click();
+	    }
+	});
 }

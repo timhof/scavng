@@ -6,6 +6,7 @@
 GET     /                                       		Application.index
 
 GET     /register                        				Login.register
+GET     /logout                        					Login.logout
 
 GET     /targets                        				Targets.index
 GET     /target/detail_json/{id}             			Targets.detailJSON
@@ -18,10 +19,12 @@ GET     /users/accept/{invitationId}            		Users.acceptInvitation
 GET     /users/decline/{invitationId}           		Users.declineInvitation
 
 GET     /hunts                                			Hunts.index
-GET     /hunts/remove/{id}                    			Hunts.remove
 GET     /hunt/detail/{id}                    			Hunts.detail
 GET     /hunt/detail_json/{id}               			Hunts.detailJSON
 GET     /hunt/detail_pdf/{id}               			Hunts.detailPDF
+GET     /hunts/remove/{id}                    			HuntsSecured.remove
+GET     /hunt/{id}/start               					HuntsSecured.start
+GET     /hunt/{id}/end            						HuntsSecured.end
 
 GET  	/hunt/{huntId}/targets/remove/{targetId}    	Hunts.removeTarget
 
