@@ -1,0 +1,28 @@
+#{extends 'main.html' /}
+#{set title:'Target' /}
+#{set pageName:'targetDetail' /}
+
+<div>
+	<h2>Hunt: ${target.description}</h2>
+</div>
+<div>
+	<h2>Message: ${target.message}</h2>
+</div>
+<div>
+	<h2>Bounty: ${target.bounty}</h2>
+</div>
+<div>
+	<h2>Location: [${target.latitude}, ${target.longitude}]</h2>
+</div>
+<div>
+	<h2>QR Code: ${target.qrCodePath}</h2>
+</div>
+<div>
+	<img src="${target.qrCodePath}" />
+</div>
+<div>
+	<h2>Hunt: ${target.hunt.description}</h2>
+</div>
+
+	
+    

@@ -5,10 +5,8 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import play.db.jpa.Model;
-
 @Entity
-public class Invitation extends Model {
+public class Invitation extends BaseModel {
 
 	public enum InvitationStatus {
 		SENT, ACCEPTED, DECLINED, REVOKED;
@@ -48,4 +46,15 @@ public class Invitation extends Model {
 		this.status = status;
 	}
 
+	public void setAccepted() {
+
+		Player player = user.joinHunt(hunt);
+		if (player != null) {
+
+			hunt.addPlayer(player);
+			hunt.save();
+		}
+
+		status = InvitationStatus.ACCEPTED;
+	}
 }

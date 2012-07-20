@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.041" errors="0" skipped="0" tests="2" name="unit.models.TargetTest">
+  <testcase classname="unit.models.TargetTest" name="createTargetWithHunt" time="0.037">
+      </testcase>
+  <testcase classname="unit.models.TargetTest" name="createTargetWithoutHunt" time="0.004">
+      </testcase>
+</testsuite>

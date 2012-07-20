@@ -15,7 +15,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
 
 public class QRHelper {
 
-	public static File getQRImage(Target target) throws IOException,
+	public static String createQRImage(Target target) throws IOException,
 			WriterException {
 
 		File file = null;
@@ -30,15 +30,16 @@ public class QRHelper {
 		matrix = writer.encode(url, com.google.zxing.BarcodeFormat.QR_CODE,
 				200, 200);
 
-		String filePath = "public/images/qr_codes/qr_" + target.getId()
-				+ ".png";
+		String filePath = String.format("/public/images/qr_codes/qr_%d.png",
+				target.getId());
+
 		file = Play.getFile(filePath);
 
 		file.createNewFile();
-		file.deleteOnExit();
+		// file.deleteOnExit();
 
 		MatrixToImageWriter.writeToFile(matrix, "PNG", file);
 
-		return file;
+		return filePath;
 	}
 }

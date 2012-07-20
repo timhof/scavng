@@ -55,10 +55,10 @@ public class HuntsSecured extends UserBaseController {
 			Logger.info("Only hunt organizer can edit hunt targets");
 			Hunts.index();
 		}
-		target.setHunt(hunt);
-		target.save();
+		// target.setHunt(hunt);
+		// target.save();
 		if (!hunt.getTargets().contains(target)) {
-			hunt.getTargets().add(target);
+			hunt.addTarget(target);
 		}
 		hunt.save();
 		Hunts.detail(hunt.getId());

@@ -15,14 +15,12 @@
 </div>
 	
 <div>
-	<h2>Players</h2>
 	#{playersTable players:hunt.players /}
     #{if isOrganizer}
     <p><a id="add_user_btn" class="btn btn-create" href="#">Invite Player</a></p>
     #{/if}
 </div>
 <div>
-	<h2>Targets</h2>
 	#{targetsTable targets:hunt.targets /}
 	#{if isOrganizer}
     <p><a id="add_target_btn" class="btn btn-create" href="#">+ Add Target</a></p>
@@ -35,7 +33,6 @@
 
 #{if isOrganizer}
 <div>
-	<h2>Invitations</h2>
 	#{invitationsTable invitations:hunt.invitations /}
 </div>
 #{/if}

@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.persistence.CascadeType;
@@ -10,10 +11,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import play.db.jpa.Model;
-
 @Entity
-public class Hunt extends Model {
+public class Hunt extends BaseModel {
 
 	public enum HuntType {
 		OPEN("Open"), INVITE_ONLY("Invite-only");
@@ -47,7 +46,7 @@ public class Hunt extends Model {
 	private HuntType huntType = HuntType.OPEN;
 	private HuntStatus huntStatus = HuntStatus.CREATED;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
 	@JoinColumn(name = "organizer_id")
 	private Organizer organizer;
 
@@ -62,6 +61,15 @@ public class Hunt extends Model {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "location_id")
 	private Location location;
+
+	public Hunt() {
+
+	}
+
+	public Hunt(String description, Organizer organizer) {
+		this.description = description;
+		this.organizer = organizer;
+	}
 
 	public String getDescription() {
 		return description;
@@ -80,7 +88,14 @@ public class Hunt extends Model {
 	}
 
 	public Collection<Player> getPlayers() {
+		if (players == null) {
+			players = new ArrayList<Player>();
+		}
 		return players;
+	}
+
+	public void addPlayer(Player player) {
+		getPlayers().add(player);
 	}
 
 	public void setPlayers(Collection<Player> players) {
@@ -88,6 +103,9 @@ public class Hunt extends Model {
 	}
 
 	public Collection<Target> getTargets() {
+		if (this.targets == null) {
+			this.targets = new ArrayList<Target>();
+		}
 		return targets;
 	}
 
@@ -95,8 +113,20 @@ public class Hunt extends Model {
 		this.targets = targets;
 	}
 
+	public void addTarget(Target target) {
+		target.setHunt(this);
+		this.getTargets().add(target);
+	}
+
 	public Collection<Invitation> getInvitations() {
+		if (invitations == null) {
+			this.invitations = new ArrayList<Invitation>();
+		}
 		return invitations;
+	}
+
+	public void addInvitation(Invitation invitation) {
+		this.getInvitations().add(invitation);
 	}
 
 	public void setInvitations(Collection<Invitation> invitations) {
@@ -119,4 +149,15 @@ public class Hunt extends Model {
 		this.huntType = huntType;
 	}
 
+	public boolean hasPlayerForUser(User user) {
+		boolean hasPlayer = false;
+		if (user != null) {
+			for (Player player : players) {
+				if (player.getUser().equals(user)) {
+					hasPlayer = true;
+				}
+			}
+		}
+		return hasPlayer;
+	}
 }

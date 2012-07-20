@@ -1,11 +1,14 @@
 
+<h3>Hunts</h3>
 <table class="table table-striped table-bordered table-condensed">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Description</th>
                 <th>Status</th>
+                <th>Organizer</th>
                 <th>Action</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -14,13 +17,27 @@
                     <td>${h.id}</td>
                     <td>${h.description}</td>
                     <td>${h.huntStatus.label}</td>
+                    <td>${h.organizer.user.email}</td>
                     <td>
                     	<a href="@{Hunts.detail(h.id)}">detail</a> | 
-                    	<a href="@{HuntsSecured.remove(h.id)}">remove</a> | 
+            	#{if h.organizer.user == _user}
+                    #{if h.huntStatus == models.Hunt.HuntStatus.CREATED}
                     	<a href="#" onclick="javascript:edit_hunt(${h.id})">edit</a> | 
                     	<a href="@{HuntsSecured.start(h.id)}">Start</a> | 
+                    	<a href="@{HuntsSecured.remove(h.id)}">remove</a> | 
+                   	#{/if}
+                   	#{elseif h.huntStatus == models.Hunt.HuntStatus.IN_PROGRESS}
                     	<a href="@{HuntsSecured.end(h.id)}">End</a> | 
-                    	<a href="@{HuntsSecured.joinHunt(h.id)}">Join</a>
+                   	#{/elseif}
+               	#{/if}
+                   </td>
+                   <td>
+                   		#{if h.hasPlayerForUser(user)}
+                    		<a href="@{HuntsSecured.joinHunt(h.id)}">Join</a>
+               			#{/if}
+                		#{else}
+                			<span>Registered</span>
+                		#{/else}
                    </td>
               	</tr>
             #{/list}

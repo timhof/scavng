@@ -1,4 +1,3 @@
-import java.io.File;
 import java.io.IOException;
 
 import models.Target;
@@ -24,7 +23,7 @@ public class ApplicationTest extends FunctionalTest {
 	@Test
 	public void testQRCode() throws IOException, WriterException {
 
-		File file = QRHelper.getQRImage(new Target());
+		String path = QRHelper.createQRImage(new Target());
 		System.out.println("WROTE FILE");
 	}
 }

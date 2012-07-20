@@ -2,11 +2,22 @@
 #{set title:'Users' /}
 #{set pageName:'userDetail' /}
 
+
 <div>
 	#{invitationsTable invitations:user.invitations, user:user /}
 </div>
 
+<hr/>
+
+<h3>Organized Hunts</h3>
 <div>
-	#{huntsTable hunts:user.hunts /}
+	#{huntsTable hunts:user.ownedHunts, user:user /}
+</div>
+
+<hr/>
+
+<h3>Joined Hunts</h3>
+<div>
+	#{huntsTable hunts:user.hunts, user:user /}
 </div>
     

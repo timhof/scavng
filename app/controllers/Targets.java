@@ -22,6 +22,11 @@ public class Targets extends UserBaseController {
 		index();
 	}
 
+	public static void detail(Long id) {
+		Target target = Target.findById(id);
+		render(target);
+	}
+
 	public static void detailJSON(Long id) {
 		Target target = Target.findById(id);
 

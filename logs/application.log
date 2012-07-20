@@ -127,3 +127,1254 @@ Caused by: groovy.lang.MissingPropertyException: No such property: score for cla
 	at /app/views/Users/detail.html.(line:3)
 	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
 	... 16 more
+2012-06-19 08:13:44,492 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-06-19 08:13:44,513 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-06-19 08:13:44,514 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-06-19 08:13:45,589 WARN  ~ You're running Play! in DEV mode
+2012-06-19 08:13:45,720 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-06-19 08:13:54,563 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-06-19 08:13:55,836 INFO  ~ Application 'scavenger' is now started !
+2012-06-19 08:15:38,600 INFO  ~ Loggin IN
+2012-06-19 08:15:38,621 INFO  ~ Authenticated?: true
+2012-06-19 08:20:09,478 ERROR ~ 
+
+@6am2hdjeg
+Internal Server Error (500) for request GET /users/detail/2
+
+Template execution error (In /app/views/tags/huntsTable.html around line 25)
+Execution error occured in template /app/views/tags/huntsTable.html. Exception raised was NullPointerException : Cannot get property 'hunts' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'hunts' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:379)
+	at /app/views/Users/detail.html.(line:13)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Users.detail(Users.java:35)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'hunts' on null object
+	at /app/views/tags/huntsTable.html.(line:25)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 16 more
+2012-06-19 08:41:30,238 INFO  ~ Loggin IN
+2012-06-19 08:41:30,244 INFO  ~ Authenticated?: true
+2012-06-19 08:50:46,003 ERROR ~ 
+
+@6am2hdjeh
+Internal Server Error (500) for request GET /hunts
+
+Template compilation error (In /app/views/Hunts/index.html around line 5)
+The template /app/views/Hunts/index.html does not compile : unexpected token: user 
+
+play.exceptions.TemplateCompilationException: unexpected token: user 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:174)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:195)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.index(Hunts.java:26)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+2012-06-19 08:51:29,385 INFO  ~ Loggin IN
+2012-06-19 08:51:29,391 INFO  ~ Authenticated?: true
+2012-07-10 18:22:23,719 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-10 18:22:23,804 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-10 18:22:23,805 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-10 18:22:27,915 WARN  ~ You're running Play! in DEV mode
+2012-07-10 18:22:29,035 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-10 18:22:43,927 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-10 18:22:49,588 INFO  ~ Application 'scavenger' is now started !
+2012-07-10 18:23:32,725 INFO  ~ Loggin IN
+2012-07-10 18:23:32,825 INFO  ~ Authenticated?: true
+2012-07-10 18:26:41,964 ERROR ~ 
+
+@6b22bg06l
+Internal Server Error (500) for request GET /hunts
+
+Template compilation error (In /app/views/tags/huntsTable.html around line 28)
+The template /app/views/tags/huntsTable.html does not compile : #{else} is not closed.
+
+play.exceptions.TemplateCompilationException: #{else} is not closed.
+	at play.templates.GroovyTemplateCompiler.endTag(GroovyTemplateCompiler.java:316)
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:93)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:28)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:87)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:348)
+	at /app/views/Targets/index.html.(line:18)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.index(Hunts.java:26)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+2012-07-10 18:26:53,131 ERROR ~ 
+
+@6b22bg06m
+Internal Server Error (500) for request GET /hunts
+
+Template execution error (In /app/views/tags/huntsTable.html around line 24)
+Execution error occured in template /app/views/tags/huntsTable.html. Exception raised was NullPointerException : Cannot get property 'HuntStatus' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'HuntStatus' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:379)
+	at /app/views/Targets/index.html.(line:18)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.index(Hunts.java:26)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'HuntStatus' on null object
+	at /app/views/tags/huntsTable.html.(line:24)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 16 more
+2012-07-10 18:27:18,587 ERROR ~ 
+
+@6b22bg06n
+Internal Server Error (500) for request GET /hunts
+
+Template execution error (In /app/views/tags/huntsTable.html around line 24)
+Execution error occured in template /app/views/tags/huntsTable.html. Exception raised was NullPointerException : Cannot get property 'HuntStatus' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'HuntStatus' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:379)
+	at /app/views/Targets/index.html.(line:18)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.index(Hunts.java:26)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'HuntStatus' on null object
+	at /app/views/tags/huntsTable.html.(line:24)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 16 more
+2012-07-10 18:28:06,712 ERROR ~ 
+
+@6b22bg06o
+Internal Server Error (500) for request GET /hunts
+
+Template execution error (In /app/views/tags/huntsTable.html around line 24)
+Execution error occured in template /app/views/tags/huntsTable.html. Exception raised was NullPointerException : Cannot get property 'HuntStatus' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'HuntStatus' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:379)
+	at /app/views/Targets/index.html.(line:18)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.index(Hunts.java:26)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'HuntStatus' on null object
+	at /app/views/tags/huntsTable.html.(line:24)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 16 more
+2012-07-10 18:28:08,872 ERROR ~ 
+
+@6b22bg06p
+Internal Server Error (500) for request GET /hunts
+
+Template execution error (In /app/views/tags/huntsTable.html around line 24)
+Execution error occured in template /app/views/tags/huntsTable.html. Exception raised was NullPointerException : Cannot get property 'HuntStatus' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'HuntStatus' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:379)
+	at /app/views/Targets/index.html.(line:18)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.index(Hunts.java:26)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'HuntStatus' on null object
+	at /app/views/tags/huntsTable.html.(line:24)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 16 more
+2012-07-10 18:28:19,051 ERROR ~ 
+
+@6b22bg070
+Internal Server Error (500) for request GET /hunts
+
+Template execution error (In /app/views/tags/huntsTable.html around line 24)
+Execution error occured in template /app/views/tags/huntsTable.html. Exception raised was NullPointerException : Cannot get property 'HuntStatus' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'HuntStatus' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:379)
+	at /app/views/Targets/index.html.(line:18)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.index(Hunts.java:26)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'HuntStatus' on null object
+	at /app/views/tags/huntsTable.html.(line:24)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 16 more
+2012-07-10 18:28:24,149 ERROR ~ 
+
+@6b22bg071
+Internal Server Error (500) for request GET /hunts
+
+Template execution error (In /app/views/tags/huntsTable.html around line 24)
+Execution error occured in template /app/views/tags/huntsTable.html. Exception raised was NullPointerException : Cannot get property 'HuntStatus' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'HuntStatus' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:379)
+	at /app/views/Targets/index.html.(line:18)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.index(Hunts.java:26)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'HuntStatus' on null object
+	at /app/views/tags/huntsTable.html.(line:24)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 16 more
+2012-07-10 18:28:36,435 ERROR ~ 
+
+@6b22bg075
+Internal Server Error (500) for request GET /hunts
+
+Template not found (In /app/views/Hunts/index.html around line 5)
+The template tags/elsif.html or tags/elsif.tag does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : tags/elsif.html or tags/elsif.tag
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:383)
+	at /app/views/Targets/index.html.(line:18)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Hunts.index(Hunts.java:26)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+2012-07-11 06:54:26,311 ERROR ~ 
+
+@6b22bg076
+Internal Server Error (500) for request GET /target/detail/2
+
+Template execution error (In /app/views/Targets/detail.html around line 21)
+Execution error occured in template /app/views/Targets/detail.html. Exception raised was NullPointerException : Cannot get property 'description' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'description' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Targets.detail(Targets.java:27)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'description' on null object
+	at /app/views/Targets/detail.html.(line:21)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	... 13 more
+2012-07-11 07:01:24,562 ERROR ~ 
+
+@6b22bg077
+Internal Server Error (500) for request POST /huntssecured/savetarget
+
+Execution exception (In /app/models/Target.java around line 102)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at models.Target.setQRCodePath(Target.java:102)
+	at org.hibernate.ejb.event.BeanCallback.invoke(BeanCallback.java:37)
+	at org.hibernate.ejb.event.EntityCallbackHandler.callback(EntityCallbackHandler.java:94)
+	at org.hibernate.ejb.event.EntityCallbackHandler.postCreate(EntityCallbackHandler.java:67)
+	at org.hibernate.ejb.event.EJB3PostInsertEventListener.onPostInsert(EJB3PostInsertEventListener.java:47)
+	at org.hibernate.action.EntityIdentityInsertAction.postInsert(EntityIdentityInsertAction.java:131)
+	at org.hibernate.action.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:90)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:273)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:320)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at controllers.HuntsSecured.saveTarget(HuntsSecured.java:59)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+2012-07-11 07:02:00,427 ERROR ~ 
+
+@6b22bg078
+Internal Server Error (500) for request POST /huntssecured/savetarget
+
+Execution exception (In /app/models/Target.java around line 103)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at models.Target.setQRCodePath(Target.java:103)
+	at org.hibernate.ejb.event.BeanCallback.invoke(BeanCallback.java:37)
+	at org.hibernate.ejb.event.EntityCallbackHandler.callback(EntityCallbackHandler.java:94)
+	at org.hibernate.ejb.event.EntityCallbackHandler.postCreate(EntityCallbackHandler.java:67)
+	at org.hibernate.ejb.event.EJB3PostInsertEventListener.onPostInsert(EJB3PostInsertEventListener.java:47)
+	at org.hibernate.action.EntityIdentityInsertAction.postInsert(EntityIdentityInsertAction.java:131)
+	at org.hibernate.action.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:90)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:273)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:320)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at controllers.HuntsSecured.saveTarget(HuntsSecured.java:59)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+2012-07-11 07:04:27,775 INFO  ~ PATH: /Users/timhof/Documents/scavenger/public/images/qr_codes/qr_13.png
+2012-07-11 07:04:27,816 ERROR ~ 
+
+@6b22bg079
+Internal Server Error (500) for request POST /huntssecured/savetarget
+
+Execution exception (In /app/models/Target.java around line 105)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at models.Target.setQRCodePath(Target.java:105)
+	at org.hibernate.ejb.event.BeanCallback.invoke(BeanCallback.java:37)
+	at org.hibernate.ejb.event.EntityCallbackHandler.callback(EntityCallbackHandler.java:94)
+	at org.hibernate.ejb.event.EntityCallbackHandler.postCreate(EntityCallbackHandler.java:67)
+	at org.hibernate.ejb.event.EJB3PostInsertEventListener.onPostInsert(EJB3PostInsertEventListener.java:47)
+	at org.hibernate.action.EntityIdentityInsertAction.postInsert(EntityIdentityInsertAction.java:131)
+	at org.hibernate.action.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:90)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:273)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:320)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at controllers.HuntsSecured.saveTarget(HuntsSecured.java:59)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	... 1 more
+2012-07-11 19:21:51,034 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-11 19:21:51,039 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-11 19:21:51,039 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-11 19:21:52,403 WARN  ~ You're running Play! in DEV mode
+2012-07-11 19:21:52,518 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-11 19:21:58,196 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-11 19:22:00,189 INFO  ~ Application 'scavenger' is now started !
+2012-07-11 19:53:14,578 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-11 19:53:14,585 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-11 19:53:14,585 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-11 19:53:15,259 WARN  ~ You're running Play! in DEV mode
+2012-07-11 19:53:15,352 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-11 19:53:45,075 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-11 19:53:46,001 INFO  ~ Application 'scavenger' is now started !
+2012-07-11 19:53:46,955 ERROR ~ 
+
+@6b2a4329f
+Error during job execution (Bootstrap)
+
+Execution exception (In /app/Bootstrap.java around line 90)
+IllegalStateException occured : org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.Hunt.organizer -> models.Organizer
+
+play.exceptions.JavaExecutionException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.Hunt.organizer -> models.Organizer
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.IllegalStateException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.Hunt.organizer -> models.Organizer
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1211)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:798)
+	at play.db.jpa.JPABase._save(JPABase.java:35)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:90)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.Hunt.organizer -> models.Organizer
+	at org.hibernate.engine.CascadingAction$9.noCascade(CascadingAction.java:387)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:172)
+	at org.hibernate.event.def.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:175)
+	at org.hibernate.event.def.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:166)
+	at org.hibernate.event.def.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:88)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:795)
+	... 7 more
+2012-07-11 19:53:47,890 ERROR ~ 
+
+@6b2a4329f
+Internal Server Error (500) for request GET /
+
+Execution exception (In /app/Bootstrap.java around line 90)
+IllegalStateException occured : org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.Hunt.organizer -> models.Organizer
+
+play.exceptions.JavaExecutionException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.Hunt.organizer -> models.Organizer
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.IllegalStateException: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.Hunt.organizer -> models.Organizer
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1211)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:798)
+	at play.db.jpa.JPABase._save(JPABase.java:35)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:90)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.TransientObjectException: object references an unsaved transient instance - save the transient instance before flushing: models.Hunt.organizer -> models.Organizer
+	at org.hibernate.engine.CascadingAction$9.noCascade(CascadingAction.java:387)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:172)
+	at org.hibernate.event.def.AbstractFlushingEventListener.cascadeOnFlush(AbstractFlushingEventListener.java:175)
+	at org.hibernate.event.def.AbstractFlushingEventListener.prepareEntityFlushes(AbstractFlushingEventListener.java:166)
+	at org.hibernate.event.def.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:88)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1216)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.flush(AbstractEntityManagerImpl.java:795)
+	... 7 more
+2012-07-11 19:54:51,353 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-11 19:54:51,357 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-11 19:54:51,357 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-11 19:54:51,904 WARN  ~ You're running Play! in DEV mode
+2012-07-11 19:54:51,995 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-11 19:55:16,570 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-11 19:55:17,488 INFO  ~ Application 'scavenger' is now started !
+2012-07-11 19:55:18,265 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-11 20:01:43,671 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-11 20:01:43,675 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-11 20:01:43,675 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-11 20:01:44,232 WARN  ~ You're running Play! in DEV mode
+2012-07-11 20:01:44,317 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-11 20:02:21,812 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-11 20:02:22,795 INFO  ~ Application 'scavenger' is now started !
+2012-07-11 20:02:23,590 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-11 20:07:21,972 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-11 20:07:21,976 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-11 20:07:21,976 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-11 20:07:22,570 WARN  ~ You're running Play! in DEV mode
+2012-07-11 20:07:22,674 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-11 20:08:22,626 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-11 20:08:23,724 INFO  ~ Application 'scavenger' is now started !
+2012-07-11 20:08:24,503 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-11 20:09:39,964 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-11 20:09:39,968 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-11 20:09:39,969 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-11 20:09:40,541 WARN  ~ You're running Play! in DEV mode
+2012-07-11 20:09:40,632 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-11 20:09:49,498 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-11 20:09:50,422 INFO  ~ Application 'scavenger' is now started !
+2012-07-11 20:09:52,423 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-11 20:10:50,190 INFO  ~ Loggin IN
+2012-07-11 20:10:50,194 INFO  ~ USER IS NULL
+2012-07-11 20:10:50,194 INFO  ~ Authenticated?: false
+2012-07-11 20:11:00,477 INFO  ~ Loggin IN
+2012-07-11 20:11:00,482 INFO  ~ Authenticated?: true
+2012-07-12 07:13:08,133 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-12 07:13:08,138 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-12 07:13:08,149 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-12 07:13:08,804 WARN  ~ You're running Play! in DEV mode
+2012-07-12 07:13:08,932 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-12 07:13:23,353 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+2012-07-12 07:13:24,345 INFO  ~ Application 'scavenger' is now started !
+2012-07-12 07:13:24,403 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-12 07:27:57,726 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-12 07:29:36,112 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-12 07:35:07,818 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-12 07:37:07,255 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-12 07:46:32,565 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-12 07:47:06,424 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-12 07:47:06,428 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-12 07:47:06,429 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-12 07:47:06,989 WARN  ~ You're running Play! in DEV mode
+2012-07-12 07:47:07,090 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-12 07:47:15,038 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-12 07:47:15,966 INFO  ~ Application 'scavenger' is now started !
+2012-07-12 07:47:16,061 ERROR ~ Unique index or primary key violation: "CONSTRAINT_INDEX_2 ON PUBLIC.USER(EMAIL)"; SQL statement:
+insert into User (id, deviceId, email, name, passwordHash, passwordSalt, status) values (null, ?, ?, ?, ?, ?, ?) [23001-149]
+2012-07-12 07:47:16,074 ERROR ~ 
+
+@6b2djkjcb
+Error during job execution (Bootstrap)
+
+Execution exception (In /app/Bootstrap.java around line 43)
+PersistenceException occured : org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+
+play.exceptions.JavaExecutionException: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:678)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:43)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:96)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:64)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2345)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2852)
+	at org.hibernate.action.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:71)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:273)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:320)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	... 7 more
+Caused by: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "CONSTRAINT_INDEX_2 ON PUBLIC.USER(EMAIL)"; SQL statement:
+insert into User (id, deviceId, email, name, passwordHash, passwordSalt, status) values (null, ?, ?, ?, ?, ?, ?) [23001-149]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:158)
+	at org.h2.index.PageBtree.find(PageBtree.java:121)
+	at org.h2.index.PageBtreeLeaf.addRow(PageBtreeLeaf.java:146)
+	at org.h2.index.PageBtreeLeaf.addRowTry(PageBtreeLeaf.java:100)
+	at org.h2.index.PageBtreeIndex.addRow(PageBtreeIndex.java:93)
+	at org.h2.index.PageBtreeIndex.add(PageBtreeIndex.java:84)
+	at org.h2.table.RegularTable.addRow(RegularTable.java:125)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:126)
+	at org.h2.command.dml.Insert.update(Insert.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:69)
+	at org.h2.command.Command.executeUpdate(Command.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:143)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:129)
+	at org.hibernate.id.IdentityGenerator$GetGeneratedKeysDelegate.executeAndExtract(IdentityGenerator.java:94)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:57)
+	... 22 more
+2012-07-12 07:47:16,889 ERROR ~ 
+
+@6b2djkjcb
+Internal Server Error (500) for request GET /hunts
+
+Execution exception (In /app/Bootstrap.java around line 43)
+PersistenceException occured : org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+
+play.exceptions.JavaExecutionException: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:678)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:43)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:96)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:64)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2345)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2852)
+	at org.hibernate.action.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:71)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:273)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:320)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	... 7 more
+Caused by: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "CONSTRAINT_INDEX_2 ON PUBLIC.USER(EMAIL)"; SQL statement:
+insert into User (id, deviceId, email, name, passwordHash, passwordSalt, status) values (null, ?, ?, ?, ?, ?, ?) [23001-149]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:158)
+	at org.h2.index.PageBtree.find(PageBtree.java:121)
+	at org.h2.index.PageBtreeLeaf.addRow(PageBtreeLeaf.java:146)
+	at org.h2.index.PageBtreeLeaf.addRowTry(PageBtreeLeaf.java:100)
+	at org.h2.index.PageBtreeIndex.addRow(PageBtreeIndex.java:93)
+	at org.h2.index.PageBtreeIndex.add(PageBtreeIndex.java:84)
+	at org.h2.table.RegularTable.addRow(RegularTable.java:125)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:126)
+	at org.h2.command.dml.Insert.update(Insert.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:69)
+	at org.h2.command.Command.executeUpdate(Command.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:143)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:129)
+	at org.hibernate.id.IdentityGenerator$GetGeneratedKeysDelegate.executeAndExtract(IdentityGenerator.java:94)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:57)
+	... 22 more
+2012-07-12 07:48:04,838 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-12 07:48:04,842 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-12 07:48:04,843 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-12 07:48:05,405 WARN  ~ You're running Play! in DEV mode
+2012-07-12 07:48:05,507 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-12 07:48:49,709 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-12 07:48:50,720 INFO  ~ Application 'scavenger' is now started !
+2012-07-12 07:48:52,583 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-12 07:52:10,539 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-12 07:52:10,543 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-12 07:52:10,543 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-12 07:52:11,099 WARN  ~ You're running Play! in DEV mode
+2012-07-12 07:52:11,188 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-12 07:52:46,399 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-12 07:52:47,338 INFO  ~ Application 'scavenger' is now started !
+2012-07-12 07:52:49,160 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-12 07:56:29,135 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-12 07:56:29,139 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-12 07:56:29,139 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-12 07:56:29,758 WARN  ~ You're running Play! in DEV mode
+2012-07-12 07:56:29,854 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-12 07:57:04,774 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-12 07:57:05,723 INFO  ~ Application 'scavenger' is now started !
+2012-07-12 07:57:06,991 ERROR ~ 
+
+@6b2dl29fm
+Error during job execution (Bootstrap)
+
+Execution exception (In /app/models/Invitation.java around line 54)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.NullPointerException
+	at models.Invitation.setAccepted(Invitation.java:54)
+	at Bootstrap.bootstrapApp(Bootstrap.java:96)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2012-07-12 07:57:07,779 ERROR ~ 
+
+@6b2dl29fm
+Internal Server Error (500) for request GET /hunts
+
+Execution exception (In /app/models/Invitation.java around line 54)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.NullPointerException
+	at models.Invitation.setAccepted(Invitation.java:54)
+	at Bootstrap.bootstrapApp(Bootstrap.java:96)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2012-07-12 07:58:37,322 ERROR ~ 
+
+@6b2dl29fn
+Error during job execution (Bootstrap)
+
+Execution exception (In /app/Bootstrap.java around line 43)
+PersistenceException occured : org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+
+play.exceptions.JavaExecutionException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:678)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:43)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:62)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.getPropertyValue(AbstractEntityTuplizer.java:503)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getPropertyValue(AbstractEntityPersister.java:3862)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:161)
+	at org.hibernate.event.def.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:450)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:282)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	... 7 more
+Caused by: java.lang.IllegalArgumentException: Can not set java.util.Collection field models.User.invitations to models.User
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:59)
+	... 22 more
+2012-07-12 07:58:37,373 ERROR ~ 
+
+@6b2dl29fn
+Internal Server Error (500) for request GET /hunts
+
+Execution exception (In /app/Bootstrap.java around line 43)
+PersistenceException occured : org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+
+play.exceptions.JavaExecutionException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:678)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:43)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:62)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.getPropertyValue(AbstractEntityTuplizer.java:503)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getPropertyValue(AbstractEntityPersister.java:3862)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:161)
+	at org.hibernate.event.def.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:450)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:282)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	... 7 more
+Caused by: java.lang.IllegalArgumentException: Can not set java.util.Collection field models.User.invitations to models.User
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:59)
+	... 22 more
+2012-07-12 07:58:48,830 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-12 07:58:48,834 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-12 07:58:48,834 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-12 07:58:49,405 WARN  ~ You're running Play! in DEV mode
+2012-07-12 07:58:49,503 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-12 07:59:15,753 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-12 07:59:16,690 INFO  ~ Application 'scavenger' is now started !
+2012-07-12 07:59:19,282 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-13 17:46:18,070 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-13 17:46:18,100 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-13 17:46:18,101 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-13 17:46:19,513 WARN  ~ You're running Play! in DEV mode
+2012-07-13 17:46:19,754 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-13 17:46:42,737 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-13 17:46:44,834 INFO  ~ Application 'scavenger' is now started !
+2012-07-13 17:46:45,210 ERROR ~ Unique index or primary key violation: "CONSTRAINT_INDEX_2 ON PUBLIC.USER(EMAIL)"; SQL statement:
+insert into User (id, deviceId, email, name, passwordHash, passwordSalt, status) values (null, ?, ?, ?, ?, ?, ?) [23001-149]
+2012-07-13 17:46:45,223 ERROR ~ 
+
+@6b2o1f0o4
+Error during job execution (Bootstrap)
+
+Execution exception (In /app/Bootstrap.java around line 43)
+PersistenceException occured : org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+
+play.exceptions.JavaExecutionException: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:678)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:43)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:96)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:64)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2345)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2852)
+	at org.hibernate.action.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:71)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:273)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:320)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	... 7 more
+Caused by: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "CONSTRAINT_INDEX_2 ON PUBLIC.USER(EMAIL)"; SQL statement:
+insert into User (id, deviceId, email, name, passwordHash, passwordSalt, status) values (null, ?, ?, ?, ?, ?, ?) [23001-149]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:158)
+	at org.h2.index.PageBtree.find(PageBtree.java:121)
+	at org.h2.index.PageBtreeLeaf.addRow(PageBtreeLeaf.java:146)
+	at org.h2.index.PageBtreeLeaf.addRowTry(PageBtreeLeaf.java:100)
+	at org.h2.index.PageBtreeIndex.addRow(PageBtreeIndex.java:93)
+	at org.h2.index.PageBtreeIndex.add(PageBtreeIndex.java:84)
+	at org.h2.table.RegularTable.addRow(RegularTable.java:125)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:126)
+	at org.h2.command.dml.Insert.update(Insert.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:69)
+	at org.h2.command.Command.executeUpdate(Command.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:143)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:129)
+	at org.hibernate.id.IdentityGenerator$GetGeneratedKeysDelegate.executeAndExtract(IdentityGenerator.java:94)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:57)
+	... 22 more
+2012-07-13 17:46:46,729 ERROR ~ 
+
+@6b2o1f0o4
+Internal Server Error (500) for request GET /login
+
+Execution exception (In /app/Bootstrap.java around line 43)
+PersistenceException occured : org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+
+play.exceptions.JavaExecutionException: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:678)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:43)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.exception.ConstraintViolationException: could not insert: [models.User]
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:96)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:64)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2345)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2852)
+	at org.hibernate.action.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:71)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:273)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:320)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	... 7 more
+Caused by: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "CONSTRAINT_INDEX_2 ON PUBLIC.USER(EMAIL)"; SQL statement:
+insert into User (id, deviceId, email, name, passwordHash, passwordSalt, status) values (null, ?, ?, ?, ?, ?, ?) [23001-149]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:158)
+	at org.h2.index.PageBtree.find(PageBtree.java:121)
+	at org.h2.index.PageBtreeLeaf.addRow(PageBtreeLeaf.java:146)
+	at org.h2.index.PageBtreeLeaf.addRowTry(PageBtreeLeaf.java:100)
+	at org.h2.index.PageBtreeIndex.addRow(PageBtreeIndex.java:93)
+	at org.h2.index.PageBtreeIndex.add(PageBtreeIndex.java:84)
+	at org.h2.table.RegularTable.addRow(RegularTable.java:125)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:126)
+	at org.h2.command.dml.Insert.update(Insert.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:69)
+	at org.h2.command.Command.executeUpdate(Command.java:209)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:143)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:129)
+	at org.hibernate.id.IdentityGenerator$GetGeneratedKeysDelegate.executeAndExtract(IdentityGenerator.java:94)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:57)
+	... 22 more
+2012-07-13 17:46:46,831 ERROR ~ 
+
+@6b2o1f0o5
+Error during job execution (Bootstrap)
+
+Execution exception (In /app/Bootstrap.java around line 43)
+PersistenceException occured : org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+
+play.exceptions.JavaExecutionException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:678)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:43)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:62)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.getPropertyValue(AbstractEntityTuplizer.java:503)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getPropertyValue(AbstractEntityPersister.java:3862)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:161)
+	at org.hibernate.event.def.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:450)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:282)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	... 7 more
+Caused by: java.lang.IllegalArgumentException: Can not set java.util.Collection field models.User.invitations to models.User
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:59)
+	... 22 more
+2012-07-13 17:46:46,890 ERROR ~ 
+
+@6b2o1f0o5
+Internal Server Error (500) for request GET /
+
+Execution exception (In /app/Bootstrap.java around line 43)
+PersistenceException occured : org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+
+play.exceptions.JavaExecutionException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:678)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:43)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:62)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.getPropertyValue(AbstractEntityTuplizer.java:503)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getPropertyValue(AbstractEntityPersister.java:3862)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:161)
+	at org.hibernate.event.def.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:450)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:282)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	... 7 more
+Caused by: java.lang.IllegalArgumentException: Can not set java.util.Collection field models.User.invitations to models.User
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:59)
+	... 22 more
+2012-07-13 17:47:38,509 ERROR ~ 
+
+@6b2o1f0o6
+Error during job execution (Bootstrap)
+
+Execution exception (In /app/Bootstrap.java around line 44)
+PersistenceException occured : org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+
+play.exceptions.JavaExecutionException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:678)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:44)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:62)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.getPropertyValue(AbstractEntityTuplizer.java:503)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getPropertyValue(AbstractEntityPersister.java:3862)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:161)
+	at org.hibernate.event.def.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:450)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:282)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	... 7 more
+Caused by: java.lang.IllegalArgumentException: Can not set java.util.Collection field models.User.invitations to models.User
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:59)
+	... 22 more
+2012-07-13 17:47:38,563 ERROR ~ 
+
+@6b2o1f0o6
+Internal Server Error (500) for request GET /
+
+Execution exception (In /app/Bootstrap.java around line 44)
+PersistenceException occured : org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+
+play.exceptions.JavaExecutionException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: javax.persistence.PersistenceException: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1214)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1147)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1153)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:678)
+	at play.db.jpa.JPABase._save(JPABase.java:25)
+	at play.db.jpa.GenericModel.save(GenericModel.java:203)
+	at Bootstrap.bootstrapApp(Bootstrap.java:44)
+	at Bootstrap.doJob(Bootstrap.java:34)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+Caused by: org.hibernate.PropertyAccessException: could not get a field value by reflection getter of models.User.invitations
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:62)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.getPropertyValue(AbstractEntityTuplizer.java:503)
+	at org.hibernate.persister.entity.AbstractEntityPersister.getPropertyValue(AbstractEntityPersister.java:3862)
+	at org.hibernate.engine.Cascade.cascade(Cascade.java:161)
+	at org.hibernate.event.def.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:450)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:282)
+	at org.hibernate.event.def.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:203)
+	at org.hibernate.event.def.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:129)
+	at org.hibernate.ejb.event.EJB3PersistEventListener.saveWithGeneratedId(EJB3PersistEventListener.java:69)
+	at org.hibernate.event.def.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:179)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
+	at org.hibernate.event.def.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:61)
+	at org.hibernate.impl.SessionImpl.firePersist(SessionImpl.java:808)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:782)
+	at org.hibernate.impl.SessionImpl.persist(SessionImpl.java:786)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.persist(AbstractEntityManagerImpl.java:672)
+	... 7 more
+Caused by: java.lang.IllegalArgumentException: Can not set java.util.Collection field models.User.invitations to models.User
+	at org.hibernate.property.DirectPropertyAccessor$DirectGetter.get(DirectPropertyAccessor.java:59)
+	... 22 more
+2012-07-13 17:48:00,094 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-13 17:48:00,668 ERROR ~ 
+
+@6b2o1f0o7
+Internal Server Error (500) for request GET /
+
+Execution exception (In /app/models/User.java around line 217)
+ClassCastException occured : models.User cannot be cast to models.User
+
+play.exceptions.JavaExecutionException: models.User cannot be cast to models.User
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:231)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.ClassCastException: models.User cannot be cast to models.User
+	at models.User.fromMemento(User.java:217)
+	at models.User.fromMemento(User.java:1)
+	at util.MapKeys.get(MapKeys.java:60)
+	at controllers.UserBaseController.setUser(UserBaseController.java:12)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:504)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:322)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	... 1 more
+2012-07-13 17:48:25,455 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-13 17:48:25,459 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-13 17:48:25,460 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-13 17:48:26,011 WARN  ~ You're running Play! in DEV mode
+2012-07-13 17:48:26,105 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-13 17:48:51,334 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-13 17:48:52,277 INFO  ~ Application 'scavenger' is now started !
+2012-07-13 17:48:52,480 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-13 17:51:56,297 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-17 07:05:26,575 INFO  ~ Starting /Users/timhof/Documents/scavenger
+2012-07-17 07:05:26,616 INFO  ~ Module deadbolt is available (/usr/local/Cellar/play/1.2.4/libexec/modules/deadbolt-1.5.4)
+2012-07-17 07:05:26,617 INFO  ~ Module pdf is available (/usr/local/Cellar/play/1.2.4/libexec/modules/pdf-0.9)
+2012-07-17 07:05:28,857 WARN  ~ You're running Play! in DEV mode
+2012-07-17 07:05:29,277 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+2012-07-17 07:06:25,749 INFO  ~ Connected to jdbc:h2:/Users/timhof/Documents/scavenger/db/h2/play;MODE=MYSQL
+2012-07-17 07:06:28,156 INFO  ~ Application 'scavenger' is now started !
+2012-07-17 07:06:29,730 INFO  ~ BOOTSTRAP COMPLETE
+2012-07-17 07:06:59,819 INFO  ~ Loggin IN
+2012-07-17 07:06:59,839 INFO  ~ USER IS NULL
+2012-07-17 07:06:59,839 INFO  ~ Authenticated?: false
+2012-07-17 07:07:05,605 INFO  ~ Loggin IN
+2012-07-17 07:07:05,646 INFO  ~ Authenticated?: true
+2012-07-17 07:08:57,851 INFO  ~ Loggin IN
+2012-07-17 07:08:57,856 INFO  ~ Authenticated?: true

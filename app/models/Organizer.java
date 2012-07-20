@@ -7,16 +7,22 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-import play.db.jpa.Model;
-
 @Entity
-public class Organizer extends Model {
+public class Organizer extends BaseModel {
 
-	@OneToOne
+	@OneToOne(cascade = { CascadeType.ALL })
 	private User user;
 
 	@OneToMany(cascade = { CascadeType.ALL }, mappedBy = "organizer")
 	private Collection<Hunt> hunts;
+
+	public Organizer() {
+
+	}
+
+	public Organizer(User user) {
+		this.user = user;
+	}
 
 	public User getUser() {
 		return user;

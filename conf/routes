@@ -10,6 +10,7 @@ GET     /logout                        					Login.logout
 
 GET     /targets                        				Targets.index
 GET     /target/detail_json/{id}             			Targets.detailJSON
+GET     /target/detail/{id}                    			Targets.detail
 
 GET     /users                        					Users.index
 GET     /user/detail_json/{id}             				Users.detailJSON

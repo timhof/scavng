@@ -1,5 +1,6 @@
 package models;
 
+import java.io.IOException;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -7,11 +8,14 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.PostPersist;
 
-import play.db.jpa.Model;
+import Helper.QRHelper;
+
+import com.google.zxing.WriterException;
 
 @Entity
-public class Target extends Model {
+public class Target extends BaseModel {
 
 	private String description;
 	private String message;
@@ -22,12 +26,14 @@ public class Target extends Model {
 	private float longitude;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "hunt_id")
+	@JoinColumn(name = "hunt_id", nullable = false)
 	private Hunt hunt;
 
 	// Players that found this target
 	@ManyToMany(fetch = FetchType.LAZY)
 	private Collection<Player> players;
+
+	private String qrCodePath = null;
 
 	public String getDescription() {
 		return description;
@@ -85,4 +91,10 @@ public class Target extends Model {
 		this.bounty = bounty;
 	}
 
+	@PostPersist
+	public void setQRCodePath() throws IOException, WriterException {
+		if (qrCodePath == null) {
+			this.qrCodePath = QRHelper.createQRImage(this);
+		}
+	}
 }

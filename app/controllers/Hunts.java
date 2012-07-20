@@ -57,7 +57,7 @@ public class Hunts extends UserBaseController {
 		Hunt hunt = Hunt.findById(id);
 		for (Target target : hunt.getTargets()) {
 			try {
-				QRHelper.getQRImage(target);
+				QRHelper.createQRImage(target);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

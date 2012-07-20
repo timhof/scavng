@@ -2,7 +2,7 @@
 #{set title:'Hunts' /}
 #{set pageName:'hunts' /}
 
-#{huntsTable hunts:hunts /}
+#{huntsTable hunts:hunts, user:user /}
 
 #{if user != null}
     <a class="btn btn-create" href="#">+ Add Hunt</a>

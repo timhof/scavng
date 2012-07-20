@@ -18,11 +18,10 @@ import javax.persistence.OneToMany;
 
 import models.deadbolt.RoleHolder;
 import play.Logger;
-import play.db.jpa.Model;
 import sun.misc.BASE64Encoder;
 
 @Entity
-public class User extends Model implements RoleHolder, MementoBridge<User> {
+public class User extends BaseModel implements RoleHolder, MementoBridge<User> {
 
 	public enum UserStatus {
 		UNREGISTERED, REGISTERED, REGISTERED_WITH_DEVICE
@@ -49,6 +48,17 @@ public class User extends Model implements RoleHolder, MementoBridge<User> {
 
 	@OneToMany(cascade = { CascadeType.ALL }, mappedBy = "user")
 	private Collection<Player> players;
+
+	public static User init(String name, String email, String password,
+			UserRole userRole) {
+		User answer = new User();
+		answer.setName(name);
+		answer.setEmail(email);
+		answer.setPassphrase(password);
+		answer.addRole(userRole);
+
+		return answer;
+	}
 
 	public String getDeviceId() {
 		return deviceId;
@@ -215,6 +225,14 @@ public class User extends Model implements RoleHolder, MementoBridge<User> {
 		return hunts;
 	}
 
+	public Collection<Hunt> getOwnedHunts() {
+
+		Collection<Hunt> hunts = Hunt.find("organizer.user = ?", this).fetch();
+		System.out.println("hunts.size: " + hunts.size());
+		return hunts;
+
+	}
+
 	public void copyTo(User to) {
 
 		to.deviceId = deviceId;
@@ -224,4 +242,5 @@ public class User extends Model implements RoleHolder, MementoBridge<User> {
 		to.passwordSalt = passwordSalt;
 
 	}
+
 }

@@ -6,10 +6,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
-import play.db.jpa.Model;
-
 @Entity
-public class Location extends Model {
+public class Location extends BaseModel {
 
 	@OneToMany(cascade = { CascadeType.ALL }, mappedBy = "location")
 	private Collection<Hunt> hunts;

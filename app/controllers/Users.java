@@ -68,19 +68,11 @@ public class Users extends UserBaseController {
 	public static void acceptInvitation(Long invitationId) {
 
 		Invitation invitation = Invitation.findById(invitationId);
-		User user = invitation.getUser();
+		invitation.setAccepted();
 
-		Player player = user.joinHunt(invitation.getHunt());
-		if (player != null) {
-
-			invitation.getHunt().getPlayers().add(player);
-			invitation.getHunt().save();
-		}
-
-		invitation.setStatus(InvitationStatus.ACCEPTED);
 		invitation.save();
 
-		detail(user.getId());
+		detail(invitation.getUser().getId());
 	}
 
 	public static void declineInvitation(Long invitationId) {
